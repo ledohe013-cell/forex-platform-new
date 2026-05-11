@@ -1,65 +1,64 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-gray-50 flex flex-col">
+      {/* Navbar */}
+      <nav className="bg-white shadow-sm border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-8 py-4 flex items-center space-x-12">
+          <h1 className="text-2xl font-bold text-blue-700"> Forex</h1>
+          <a href="/home" className="text-gray-700 text-lg font-medium hover:text-blue-600 transition">Home</a>
+          <a href="/markets" className="text-gray-700 text-lg font-medium hover:text-blue-600 transition">Markets</a>
+          <a href="/analysis" className="text-gray-700 text-lg font-medium hover:text-blue-600 transition">Analysis</a>
+          <a href="/news" className="text-gray-700 text-lg font-medium hover:text-blue-600 transition">News</a>
+          <a href="/contact" className="text-gray-700 text-lg font-medium hover:text-blue-600 transition">Contact</a>
+          <a href="/payment" className="text-gray-700 text-lg font-medium hover:text-blue-600 transition">payment</a>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center text-center py-24 px-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+        <h2 className="text-5xl font-bold mb-4">Trade Smarter with  Forex Platform 🚀</h2>
+        <p className="text-xl max-w-2xl mb-8">
+          Real-time currency data, advanced analysis tools, and market insights — all in one place.
+        </p>
+        <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg shadow hover:bg-gray-100 transition">
+          Start Trading
+        </button>
+      </section>
+
+      {/* Market Dashboard */}
+      <section className="max-w-7xl mx-auto px-8 py-16">
+        <h3 className="text-2xl font-bold text-gray-800 mb-8">Live Market Overview</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white shadow rounded-lg p-6 text-center">
+            <h4 className="text-xl font-bold text-gray-800 mb-2">EUR/USD</h4>
+            <p className="text-green-600 font-semibold">+0.45%</p>
+            <p className="text-gray-500">1.0932</p>
+          </div>
+          <div className="bg-white shadow rounded-lg p-6 text-center">
+            <h4 className="text-xl font-bold text-gray-800 mb-2">GBP/JPY</h4>
+            <p className="text-red-600 font-semibold">-0.32%</p>
+            <p className="text-gray-500">183.45</p>
+          </div>
+          <div className="bg-white shadow rounded-lg p-6 text-center">
+            <h4 className="text-xl font-bold text-gray-800 mb-2">USD/CHF</h4>
+            <p className="text-green-600 font-semibold">+0.12%</p>
+            <p className="text-gray-500">0.8765</p>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-white border-t border-gray-200 py-6 mt-auto">
+        <div className="max-w-7xl mx-auto px-8 flex justify-between items-center text-gray-600">
+          <p>© 2025  Forex. All rights reserved.</p>
+          <div className="flex space-x-6">
+            <a href="privacy" className="hover:text-blue-600">Privacy</a>
+            <a href="terms" className="hover:text-blue-600">Terms</a>
+            <a href="support" className="hover:text-blue-600">Support</a>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 }
+
