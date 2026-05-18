@@ -2,6 +2,10 @@
   "name": "forex-platform-new",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+  "node": ">=20.9.0"
+},
+
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,6 +22,7 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.15.11",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
